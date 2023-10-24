@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Story App</string>
+
+    <string name="title_welcome">Selamat Datang di Kisah Dicoding!</string>
+    <string name="desc_welcome">Temukan kisah sukses teman-teman belajar dan lulus dari Dicoding. Terhubung dengan komunitas IT, belajar, dan berbagi. Jadi bagian dari inspirasi dan pengetahuan. Bergabunglah sekarang!</string>
+    <string name="desc_regis">Temukan Inspirasi IT: Bergabunglah dan Terhubung dengan Komunitas Dicoding.</string>
+    <string name="desc_login">Selamat Datang Kembali! Sambut Cerita Sukses dari Rekan Dicoding.</string>
+
+    <string name="btnMasuk">Masuk</string>
+    <string name="btnLogin">Masuk</string>
+    <string name="btnDaftar">Daftar</string>
+    <string name="hintNama">Nama</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPassword">Kata Sandi</string>
+    <string name="hintDeskripsi">Deskripsi Cerita</string>
+    <string name="tvLogin">Sudah punya akun?</string>
+    <string name="edLogin">Masuk sekarang</string>
+    <string name="tvDaftar">Belum punya akun? Ayo</string>
+    <string name="edDaftar">Daftar</string>
+    <string name="btnCamera">Kamera</string>
+    <string name="btnGallery">Galeri</string>
+    <string name="btnUpload">Unggah</string>
+    <string name="menu_bahasa">Bahasa</string>
+    <string name="menu_logout">Keluar</string>
+    <string name="empty_image_warning">Silakan masukkan berkas gambar terlebih dahulu.</string>
+</resources>
