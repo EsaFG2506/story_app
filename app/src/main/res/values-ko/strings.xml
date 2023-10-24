@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">스토리 앱</string>
+
+    <string name="title_welcome">디코딩 스토리에 오신 것을 환영합니다! </string>
+    <string name="desc_welcome">디코딩을 배우고 졸업한 친구들의 성공 스토리를 찾아보세요. IT 커뮤니티와 연결하고, 배우고, 공유하세요. 영감과 지식의 일부가 되어 보세요. 지금 가입하세요! </string>
+    <string name="desc_regis">IT 영감 찾기: 디코딩 커뮤니티에 가입하고 연결하세요.</string>
+    <string name="desc_login">다시 오신 것을 환영합니다! 디코딩 동료들의 성공 사례를 환영합니다.</string>
+
+    <string name="btnMasuk">로그인</string>
+    <string name="btnLogin">로그인</string>
+    <string name="btnDaftar">목록</string>
+    <string name="hintNama">이름</string>
+    <string name="hintEmail">이메일</string>
+    <string name="hintPassword">암호</string>
+    <string name="hintDeskripsi">스토리 설명</string>
+    <string name="tvLogin">이미 계정이 있으신가요? </string>
+    <string name="edLogin">지금 로그인하세요</string>
+    <string name="tvDaftar">계정이 없으신가요? 어서</string>
+    <string name="edDaftar">가입하기</string>
+    <string name="btnCamera">카메라</string>
+    <string name="btnGallery">갤러리</string>
+    <string name="btnUpload">업로드</string>
+    <string name="menu_bahasa">언어</string>
+    <string name="menu_logout">로그아웃</string>
+    <string name="empty_image_warning">이미지 파일을 먼저 삽입하세요.</string>
+</resources>

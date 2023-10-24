@@ -1,0 +1,16 @@
+Pada aplikasi Story App yang sudah saya buat, terdapat:
+
+A. 2 jenis animasi
+1. Property Animation : WelcomeActivity, RegisterActivity, LoginActivity
+2. Shared Element : DetailActivity
+
+B. 3 localization (multi bahasa)
+1. Bahasa Indonesia (Utama)
+2. English
+3. Korean
+
+C. 2 Custom View berupa EditText
+1. RegisterActivity : Email -> Email tidak valid dan Password -> Password tidak boleh kurang dari 8 karakter
+2. LoginActivity : Email -> Email tidak valid dan Password -> Password tidak boleh kurang dari 8 karakter
+
+D. Terdapat ToggleEnabled pada RegisterActivity dan LoginActivity
