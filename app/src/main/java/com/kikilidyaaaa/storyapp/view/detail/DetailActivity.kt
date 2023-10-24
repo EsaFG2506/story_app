@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
 import com.kikilidyaaaa.storyapp.R
+import com.kikilidyaaaa.storyapp.data.response.ListStoryItem
 import com.kikilidyaaaa.storyapp.databinding.ActivityDetailBinding
 import com.kikilidyaaaa.storyapp.utils.Result
 import com.kikilidyaaaa.storyapp.view.StoryViewModelFactory
@@ -38,30 +39,31 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        val id = intent.getStringExtra("id")
-        Log.d("DetailActivity", "Received id: $id")
-        showLoading(true)
-
-        detailViewModel.getDetailStories(id ?: "").observe(this) { result ->
-            if (result != null) {
-                when (result) {
-                    is Result.Loading -> {
-                        showLoading(true)
-                    }
-                    is Result.Success -> {
-                        showLoading(false)
-                        val storyDetail = result.data.story
-                        if (storyDetail != null) {
-                            Log.d("DetailActivity", "Received story detail: $storyDetail")
-                            Picasso.get().load(storyDetail.photoUrl).into(binding.ivDetailPhoto)
-                            binding.tvDetailName.text = storyDetail.name
-                            binding.tvDetailDescription.text = storyDetail.description
-                            Log.d(ContentValues.TAG, "result: ${result.data.story}")
+        val storyItem = intent.getParcelableExtra<ListStoryItem>("storyItem")
+        Log.d("DetailActivity", "Received id: $storyItem")
+        if (storyItem != null) {
+            showLoading(true)
+            detailViewModel.getDetailStories(storyItem.id).observe(this) { result ->
+                if (result != null) {
+                    when (result) {
+                        is Result.Loading -> {
+                            showLoading(true)
                         }
-                    }
-                    is Result.Error -> {
-                        showToast(result.error)
-                        showLoading(false)
+                        is Result.Success -> {
+                            showLoading(false)
+                            val storyDetail = result.data.story
+                            if (storyDetail != null) {
+                                Log.d("DetailActivity", "Received story detail: $storyDetail")
+                                Picasso.get().load(storyDetail.photoUrl).into(binding.ivDetailPhoto)
+                                binding.tvDetailName.text = storyDetail.name
+                                binding.tvDetailDescription.text = storyDetail.description
+                                Log.d(ContentValues.TAG, "result: ${result.data.story}")
+                            }
+                        }
+                        is Result.Error -> {
+                            showToast(result.error)
+                            showLoading(false)
+                        }
                     }
                 }
             }

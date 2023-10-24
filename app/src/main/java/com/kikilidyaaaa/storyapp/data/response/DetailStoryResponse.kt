@@ -1,7 +1,11 @@
 package com.kikilidyaaaa.storyapp.data.response
 
+import android.os.Parcelable
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class DetailStoryResponse(
 
 	@field:SerializedName("error")
@@ -12,9 +16,14 @@ data class DetailStoryResponse(
 
 	@field:SerializedName("story")
 	val story: Story? = null
-)
+) : Parcelable
 
+@Parcelize
 data class Story(
+
+	@PrimaryKey
+	@field:SerializedName("id")
+	val id: String? = null,
 
 	@field:SerializedName("photoUrl")
 	val photoUrl: String? = null,
@@ -31,9 +40,6 @@ data class Story(
 	@field:SerializedName("lon")
 	val lon: Double? = null,
 
-	@field:SerializedName("id")
-	val id: String? = null,
-
 	@field:SerializedName("lat")
 	val lat: Double? = null
-)
+) : Parcelable
